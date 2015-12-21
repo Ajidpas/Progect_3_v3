@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+targetNamespace="nameSpace"
+           xmlns:xs="nameSpace"
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified" >
+    <xs:element name="cards" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="card" type="Card" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>              
+    </xs:element>
+    <xs:complexType name="Card" >
+        <xs:sequence>
+            <xs:element name="thema" type="xs:string" />
+            <xs:element name="type" type="CardType" />
+            <xs:element name="was_sent" type="xs:boolean" />
+            <xs:element name="country" type="xs:string" />
+            <xs:element name="year" type="xs:int" />
+            <xs:element name="valuable" type="Valuable" />
+            <xs:sequence>
+                <xs:element name="author" type="Author" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:sequence>
+        <xs:attribute name="id" type="CardID" use="required" />
+    </xs:complexType>
+    <xs:simpleType name="CardType" >
+        <xs:restriction base="xs:string" >
+            <xs:enumeration value="GREETING_CARD" />
+            <xs:enumeration value="PROMOTIONAL_CARD" />
+            <xs:enumeration value="ORDINARY_CARD" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Valuable" >
+        <xs:restriction base="xs:string" >
+            <xs:enumeration value="HISTORICAL_VALUE" />
+            <xs:enumeration value="COLLECTION_VALUE" />
+            <xs:enumeration value="THEMATIC_VALUE" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="CardID" >
+        <xs:restriction base="xs:ID" >
+            <xs:pattern value="([a-zA-Z])[a-zA-Z0-9]{7,19}" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="Author" >
+        <xs:sequence>
+            <xs:element name="first_name" type="xs:string" />
+            <xs:element name="last_name" type="xs:string" />
+            <xs:element name="nationality" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="is-alive" type="xs:boolean" use="required" />
+    </xs:complexType>
+</xs:schema>

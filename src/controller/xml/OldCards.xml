@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<cards>
+    <card id="vasya64589" >
+        <thema>Sea</thema>
+        <type>ORDINARY_CARD</type>
+        <was_sent>true</was_sent>
+        <country>Ukraine</country>
+        <year>2015</year>
+        <valuable>THEMATIC_VALUE</valuable>
+        <author is-alive="true" >
+            <first_name>Vasya</first_name>
+            <last_name>Kusmich</last_name>
+            <nationality>ukrainian</nationality>
+        </author>
+    </card>
+    <card id="petya645879" >
+        <thema>Wood</thema>
+        <type>ORDINARY_CARD</type>
+        <was_sent>true</was_sent>
+        <country>Poland</country>
+        <year>1997</year>
+        <valuable>HISTORICAL_VALUE</valuable>
+        <author is-alive="true" >
+            <first_name>Petya</first_name>
+            <last_name>Kivalov</last_name>
+            <nationality>Poland</nationality>
+        </author>
+        <author is-alive = "false">
+            <first_name>Olga</first_name>
+            <last_name>Klimenko</last_name>
+            <nationality>Italia</nationality>
+        </author>
+    </card>
+    <card id="kostya9673512" >
+        <thema>Ring</thema>
+        <type>PROMOTIONAL_CARD</type>
+        <was_sent>false</was_sent>
+        <country>USA</country>
+        <year>1864</year>
+        <valuable>HISTORICAL_VALUE</valuable>
+        <author is-alive="false" >
+            <first_name>Evdokim</first_name>
+            <last_name>Dorn</last_name>
+            <nationality>USA</nationality>
+        </author>
+        <author is-alive="true" >
+            <first_name>Vitya</first_name>
+            <last_name>Pashtet</last_name>
+            <nationality>Ukraine</nationality>
+        </author>
+    </card>
+    <card id="oprya6546897" >
+        <thema>Flowers</thema>
+        <type>GREETING_CARD</type>
+        <was_sent>false</was_sent>
+        <country>Germany</country>
+        <year>2015</year>
+        <valuable>COLLECTION_VALUE</valuable>
+    </card>
+</cards>
